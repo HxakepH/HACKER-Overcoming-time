@@ -66,7 +66,7 @@ begin
   WOS('Save data...', 50); OKln();
   WOS('Closing thread...', 50); OKln();
   WOS('Exiting OS...', 50); OKln();
-  WOS('Off electricpower....', 50); OKln();
+  WOS('Off electric power....', 50); OKln();
   Sleep(1200);
   Halt;
 end;
@@ -90,11 +90,10 @@ begin
     end;
     WOS(host + '> ', 10);
     Readln(menucase);
+	menucase:=menucase.toLowerCase;
     case menucase of
       'help': help();
-      'Help': help();
       'exit': exitgame;
-      'Exit': exitgame;
     end;
   end;
 end;
